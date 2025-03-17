@@ -171,7 +171,7 @@ export default function Services() {
     <section 
       id="services" 
       ref={sectionRef}
-      className="py-24 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800 dark:to-gray-900 relative overflow-hidden"
+      className="py-32 mt-24 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800 dark:to-gray-900 relative overflow-hidden"
     >
       {/* Background texture */}
       <div className="absolute inset-0 opacity-5 dark:opacity-10">
@@ -181,10 +181,10 @@ export default function Services() {
         }}></div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-6 relative z-10">
         {/* Services section heading */}
-        <div ref={headingRef} className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+        <div ref={headingRef} className="max-w-3xl mx-auto text-center mb-20">
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             My Services
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300">
@@ -193,30 +193,30 @@ export default function Services() {
         </div>
 
         {/* Services cards */}
-        <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
+        <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-28">
           {services.map((service, index) => (
             <div 
               key={index}
-              className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 transform transition-all duration-300 hover:scale-105 hover:shadow-xl border-b-4 border-indigo-500 dark:border-indigo-400 group"
+              className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-10 transform transition-all duration-300 hover:scale-105 hover:shadow-xl border-b-4 border-indigo-500 dark:border-indigo-400 group h-full flex flex-col"
             >
-              <div className="w-14 h-14 rounded-full bg-indigo-100 dark:bg-indigo-900/30 flex items-center justify-center mb-6 text-indigo-600 dark:text-indigo-400 group-hover:bg-indigo-500 group-hover:text-white transition-all duration-300">
+              <div className="w-16 h-16 rounded-full bg-indigo-100 dark:bg-indigo-900/30 flex items-center justify-center mb-8 text-indigo-600 dark:text-indigo-400 group-hover:bg-indigo-500 group-hover:text-white transition-all duration-300">
                 {service.icon}
               </div>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">{service.title}</h3>
-              <p className="text-gray-600 dark:text-gray-300">{service.description}</p>
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">{service.title}</h3>
+              <p className="text-lg text-gray-600 dark:text-gray-300 flex-grow">{service.description}</p>
             </div>
           ))}
         </div>
 
         {/* Connecting lines */}
-        <div ref={linesRef} className="hidden md:block relative h-24 mb-16">
-          <div className="absolute left-1/4 right-1/4 top-1/2 h-0.5 bg-indigo-200 dark:bg-indigo-800"></div>
-          <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-indigo-200 dark:bg-indigo-800"></div>
+        <div ref={linesRef} className="hidden md:block relative h-32 mb-24">
+          <div className="absolute left-1/4 right-1/4 top-1/2 h-1 bg-indigo-200 dark:bg-indigo-800"></div>
+          <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-indigo-200 dark:bg-indigo-800"></div>
         </div>
 
         {/* Pricing section */}
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+        <div className="max-w-3xl mx-auto text-center mb-20">
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             Pricing Plans
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300">
@@ -225,37 +225,37 @@ export default function Services() {
         </div>
 
         {/* Pricing cards */}
-        <div ref={pricingRef} className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div ref={pricingRef} className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
           {pricingPlans.map((plan) => (
             <div 
               key={plan.id}
-              className={`relative bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 border-t-4 ${plan.color} transition-all duration-300 hover:shadow-xl ${activePlan === plan.id ? 'ring-2 ring-indigo-500 ring-offset-2 dark:ring-offset-gray-900' : ''}`}
+              className={`relative bg-white dark:bg-gray-800 rounded-xl shadow-lg p-10 border-t-4 ${plan.color} transition-all duration-300 hover:shadow-xl h-full flex flex-col ${activePlan === plan.id ? 'ring-2 ring-indigo-500 ring-offset-2 dark:ring-offset-gray-900' : ''}`}
             >
               {plan.popular && (
-                <div className="absolute top-0 right-6 transform -translate-y-1/2 bg-indigo-600 text-white text-xs font-bold py-1 px-3 rounded-full">
+                <div className="absolute top-0 right-6 transform -translate-y-1/2 bg-indigo-600 text-white text-sm font-bold py-1.5 px-4 rounded-full">
                   Popular
                 </div>
               )}
-              <div className="flex items-center justify-center mb-4">
+              <div className="flex items-center justify-center mb-6">
                 {plan.icon}
               </div>
-              <h3 className="text-xl font-bold text-center text-gray-900 dark:text-white mb-2">{plan.name}</h3>
+              <h3 className="text-2xl font-bold text-center text-gray-900 dark:text-white mb-3">{plan.name}</h3>
               <div className="text-center mb-6">
-                <span className="text-4xl font-bold text-gray-900 dark:text-white">${plan.price}</span>
+                <span className="text-5xl font-bold text-gray-900 dark:text-white">${plan.price}</span>
                 <span className="text-gray-500 dark:text-gray-400"> / project</span>
               </div>
-              <p className="text-gray-600 dark:text-gray-300 text-center mb-6">{plan.description}</p>
-              <ul className="space-y-3 mb-8">
+              <p className="text-lg text-gray-600 dark:text-gray-300 text-center mb-8">{plan.description}</p>
+              <ul className="space-y-4 mb-10 flex-grow">
                 {plan.features.map((feature, index) => (
                   <li key={index} className="flex items-center text-gray-600 dark:text-gray-300">
-                    <Check size={18} className="text-green-500 mr-2 flex-shrink-0" />
-                    <span>{feature}</span>
+                    <Check size={20} className="text-green-500 mr-3 flex-shrink-0" />
+                    <span className="text-lg">{feature}</span>
                   </li>
                 ))}
               </ul>
               <button 
                 onClick={() => setActivePlan(plan.id)}
-                className={`w-full py-3 px-4 rounded-lg font-medium text-white transition-colors ${plan.buttonColor} ${activePlan === plan.id ? 'ring-2 ring-offset-2 ring-indigo-500 dark:ring-offset-gray-900' : ''}`}
+                className={`w-full py-4 px-6 rounded-lg font-medium text-white transition-colors text-lg ${plan.buttonColor} ${activePlan === plan.id ? 'ring-2 ring-offset-2 ring-indigo-500 dark:ring-offset-gray-900' : ''}`}
               >
                 {activePlan === plan.id ? 'Selected' : 'Select Plan'}
               </button>
@@ -264,12 +264,12 @@ export default function Services() {
         </div>
 
         {/* CTA section */}
-        <div className="mt-20 text-center">
+        <div className="mt-28 text-center">
           <a 
             href="#contact" 
-            className="inline-flex items-center px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full text-lg font-semibold transform hover:scale-105 transition-all duration-300"
+            className="inline-flex items-center px-10 py-5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full text-xl font-semibold transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
           >
-            <DollarSign className="mr-2" size={20} />
+            <DollarSign className="mr-3" size={24} />
             Get a Custom Quote
           </a>
         </div>
