@@ -1,0 +1,58 @@
+/* Swipe Projects styles */
+body {
+  overscroll-behavior: none;
+}
+
+/* Swipe section styles */
+.swipe-section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.swipe-section .panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+}
+
+/* Horizontal section styles */
+.horizontal-section {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.horizontal {
+  width: 400%;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.horizontal .panel {
+  width: 100vw;
+  height: 100vh;
+  flex-shrink: 0;
+}
+
+/* Arrow animation */
+.arrow {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0) rotate(45deg);
+  }
+  40% {
+    transform: translateY(-10px) rotate(45deg);
+  }
+  60% {
+    transform: translateY(-5px) rotate(45deg);
+  }
+}

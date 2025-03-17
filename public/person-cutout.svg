@@ -1,0 +1,13 @@
+<svg width="400" height="500" viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Stylized person silhouette -->
+  <path d="M200 60C226.51 60 248 81.49 248 108C248 134.51 226.51 156 200 156C173.49 156 152 134.51 152 108C152 81.49 173.49 60 200 60Z" fill="#4F46E5"/>
+  <path d="M120 450V290C120 268.95 136.95 252 158 252H242C263.05 252 280 268.95 280 290V450" stroke="#4F46E5" stroke-width="12" stroke-linecap="round"/>
+  <path d="M280 320L320 360" stroke="#4F46E5" stroke-width="12" stroke-linecap="round"/>
+  <path d="M120 320L80 360" stroke="#4F46E5" stroke-width="12" stroke-linecap="round"/>
+  <path d="M200 156V252" stroke="#4F46E5" stroke-width="12" stroke-linecap="round"/>
+  <path d="M158 180L120 220" stroke="#4F46E5" stroke-width="12" stroke-linecap="round"/>
+  <path d="M242 180L280 220" stroke="#4F46E5" stroke-width="12" stroke-linecap="round"/>
+  <!-- Decorative elements -->
+  <circle cx="200" cy="108" r="36" stroke="#818CF8" stroke-width="4" stroke-dasharray="8 8"/>
+  <circle cx="200" cy="108" r="48" stroke="#818CF8" stroke-width="2" stroke-dasharray="4 4"/>
+</svg>
